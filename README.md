@@ -1,14 +1,1 @@
-# randr
-
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Pie in the sky project. This is an attempt to make a video game to help bball players learn offensive systems. (I'm starting with the R&R by Rick Torbett, but hoping to expand it.) This is also my first attempt at doing something interesting in Clojure.

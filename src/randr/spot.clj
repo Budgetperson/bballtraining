@@ -3,6 +3,8 @@
 
 (def spot-radius 10)
 
+(defn find-first [pred coll] (first (filter pred coll)))
+
 (def spots ; x, y, perimeter
   { :left-corner  {:x 50 :y 90, :perimeter true}
     :right-corner   {:x 950 :y 50 :perimeter true}
@@ -26,4 +28,7 @@
     (math/expt spot-radius 2)))
 
 (defn which-spot [coordinate]
-  (first (first (filter (fn [[_ {x :x y :y}]] (on-spot [x y] coordinate)) (seq spots)))))
+  "Returns the symbol for the spot the coordinate is on. Returns nil if not on spot."
+  (find-first (fn [spot-name] 
+                (on-spot (spot-to-coordinate spot-name) coordinate))
+              (keys spots)))
